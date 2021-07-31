@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <title>Form</title>
+    <style>
+      .card {
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+
+</style>
+<script>
+  function lettersOnly(input)
+     {
+                      let ch=/[^a-z]/gi;
+
+                      input.value =input.value.replace(ch,"");
+                      console.log(input.value);
+                      
+
+     }
+   </script>
+</head>
+<body>
+  <div style="background-color:rgba(255,236,236,255);">
+    <div>
+        
+        <!--Margin left for positioning the title of page-->
+        <!--h1 style="font-size: 2cm;font-family: 'Lobster', cursive;margin-left: 35%">FUNDINGX</h1-->
+        <img style="margin-left: 26%;"src= "logo.png" width="700" height="200">
+    </div>
+    <!--Padding for navigation bar-->
+    <br><br>
+    
+    <div class="card">
+      
+      <div class="container">
+        <h4><b>Web Development Task</b></h4> 
+        <p>Welcome to FundingX! </p> 
+
+          <p>To become a part of our Web Development Team, please complete the task before the deadline mentioned.</p>
+           
+          <p>No task submissions will be entertained after the deadline </p>
+          
+          TASK -<br>
+          Replicate this Google form which you are looking at.
+          
+          <p>You may use HTML,CSS or ReactJs. Preference will be given to one using ReactJs and able to send JSON file to a URL.</p>
+          
+          <p>If you like, you may enhance the looks of the page according to you.</p>
+          
+         <p> Host this page on GitHub pages or any hosting service you like and paste link in the form.</p>
+          
+          <p>The tasks given are for understanding how well you are equipped with the skills.</p>
+          
+          Deadline for submission- July 31, 4:00 p.m.<br><br>
+      </div>
+    </div>
+    <br><br><br>
+        <div class="container">
+          <div class="content-box">
+            <div class="right">
+              <form autocomplete="off" autocapitalize="on">
+
+                <div class="card" style="height:100px;">
+                  <div class="container">
+                <label  class="input-label" style="display: flex;flex-direction:column"> 
+                  <label style="margin:8px 0" >Name</label>
+                <input
+                  type="text"
+                  id="firstname"
+                  class="field"
+                  
+                  onkeyup="lettersOnly(this)"
+                >
+                </input>
+                <span  class="successful" id="successful"></span>
+                <span  class="danger" id="danger"> </span>
+              </label>
+              <div id="firstnamevalidity" class="validity"></div>
+               </div>
+               </div>
+            
+               <br><br>
+              <div class="card" style="height: 100px;">
+                <div class="container">
+                <label class="input-label"  style="display: flex;flex-direction:column">      
+                  <label style="margin:8px 0" >Email</label>
+    
+                  <input
+                  type="email"
+                  id="email"
+                  class="field"
+                  
+                />
+                
+                <span  class="successful" id="successfulemail"></span>
+                <span  class="danger" id="dangeremail"></span>
+              </label>
+    
+                <div id="emailvalidity" class="validity">
+                </div>
+              </div>
+            </div>
+                
+            <br><br>
+            <div class="card" style="height: 100px;">
+              <div class="container">
+                <label class="input-label"  style="display: flex;flex-direction:column">
+                  <label style="margin:8px 0" >Phone No.</label>
+    
+                  <input
+                  type="phone"
+                  id="phone"
+                  maxlength="10"
+                  class="field"
+                  onkeyup="isNumber(this)"
+                  />
+                  
+                <span  class="successful" id="successfulphone"></span>
+                <span  class="danger" id="dangerphone"></span>
+                  
+    
+                </label>
+                <div id="phonevalidity" class="validity"></div>
+                </div></div>
+                
+                <br><br>
+                
+                <div class="card" style="height: 100px;">
+                  <div class = "container">
+                <label class="input-label"  style="display: flex;flex-direction:column">
+                  <label style="margin:8px 0" >Page URL</label>
+    
+                <input
+                  type="text"
+                  id="address"
+                  class="field"
+                ></input>
+                <span  class="successful" id="successfuladdress"></span>
+                <span  class="danger" id="dangeraddress"></span>
+                </label>
+                <div id="addressvalidity" class="validity"></div>
+                </div></div>
+
+                <br><br>
+
+                <div class="card" style="height: 100px;">
+                  <div class = "container">
+                <label class="input-label"  style="display: flex;flex-direction:column">
+                  <label style="margin:8px 0" >What is FundingX about? </label>
+    
+                <input
+                  type="text"
+                  id="details"
+                  class="field"
+                ></input>
+                <span  class="successful" id="successfuldetails"></span>
+                <span  class="danger" id="dangerdetails"></span>
+                </label>
+                <div id="detailsvalidity" class="validity"></div>
+                </div></div>
+
+                <br>
+                <br>
+                <div class="card" style="height: 140px;">
+                  <div class = "container">
+                <div class="gender input-label">            
+                Select Gender
+                <br><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label>Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label>Female</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label>Other</label><br>
+              </div>
+              </div></div>
+              
+              <br><br>
+                <center><button style="color: green;">Submit</button>
+                  &NonBreakingSpace;
+                <button style="color: red;" type="reset">Reset</button>
+                </center>
+                <br><br>
+
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({ offset: 400, duration: 1000 });
+        </script>
+        <script>
+          function isNumber(input)
+          {
+            var num = /[^0-9]/g;
+            input.value =input.value.replace(num,"");
+          }
+        </script>
+        <script type="text/javascript" src="./validate.js"></script>
+        <!--Margin top for positioning the footer-->
+        <!--Padding used in footer-->
+         
+        
+</body>
+</html>
